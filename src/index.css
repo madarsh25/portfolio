@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Custom Scrollbar for other scroll containers */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.skill-gradient-text {
+  background: linear-gradient(130deg, #6b7280 0%, #d1d5db 45%, #4b5563 100%);
+  -webkit-background-clip: text;
+  -webkit-background-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Ticker Animations */
+@keyframes ticker-scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll-left 25s linear infinite;
+}
+
+.ticker-track-reverse {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll-left 25s linear infinite reverse;
+}
+
+/* Custom styles for animations and specific reference styles */
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-dm-sans {
+  font-family: 'DM Sans', sans-serif;
+}

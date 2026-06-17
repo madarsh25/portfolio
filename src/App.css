@@ -1,0 +1,5 @@
+/* Custom App transitions/scrolling styles can go here */
+html, body {
+  scroll-behavior: smooth;
+  background-color: #000;
+}
