@@ -134,11 +134,18 @@ const GooeyNav = ({
 
   useEffect(() => {
     if (!navRef.current || !containerRef.current) return;
-    const activeLi = navRef.current.querySelectorAll('li')[activeIndex];
-    if (activeLi) {
-      updateEffectPosition(activeLi);
-      textRef.current?.classList.add('active');
-    }
+
+    let rafId;
+    const update = () => {
+      const activeLi = navRef.current?.querySelectorAll('li')[activeIndex];
+      if (activeLi) {
+        updateEffectPosition(activeLi);
+        textRef.current?.classList.add('active');
+      }
+    };
+
+    // Defer position updates to ensure DOM is fully laid out
+    rafId = requestAnimationFrame(update);
 
     const resizeObserver = new ResizeObserver(() => {
       const currentActiveLi = navRef.current?.querySelectorAll('li')[activeIndex];
@@ -148,7 +155,10 @@ const GooeyNav = ({
     });
 
     resizeObserver.observe(containerRef.current);
-    return () => resizeObserver.disconnect();
+    return () => {
+      cancelAnimationFrame(rafId);
+      resizeObserver.disconnect();
+    };
   }, [activeIndex]);
 
   return (

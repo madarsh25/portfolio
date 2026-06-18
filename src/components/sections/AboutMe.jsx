@@ -17,7 +17,7 @@ const AboutMe = () => {
           ideas and <span className="font-playfair italic text-gray-400 font-normal">experiences</span>
         </h2>
         <p className="mt-8 text-gray-400 leading-relaxed font-dm-sans text-sm sm:text-base">
-          I'm Adarsh Yadav, a Computer Science and Engineering (IoT) student at Thakur College of Engineering and Technology (TCET) with a 9.85 CGPA. Currently working as a Web Development Intern at Eastton Energy Solutions, I turn complex technical challenges into high-speed web products.
+          I'm Adarsh Yadav, a Computer Science and Engineering (IoT) student at Thakur College of Engineering and Technology (TCET) with a 9.85 CGPA. Having worked as a Web Development Intern at Eastton Energy Solutions (Jan 2026 - June 2026), I turn complex technical challenges into high-speed web products.
         </p>
         <p className="mt-4 text-gray-400 leading-relaxed font-dm-sans text-sm sm:text-base">
           I manage the entire stack with a focus on clean, reusable code, database integrity (MongoDB, Supabase), and frontend architectures (React, Next.js, Three.js). I excel at creating digital interfaces that solve real-world problems and enhance user experiences.
